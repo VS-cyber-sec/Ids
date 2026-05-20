@@ -1,0 +1,25 @@
+# ── Core capture pipeline ──────────────────────────────────────
+scapy>=2.5.0
+libpcap
+
+# ── Data processing ────────────────────────────────────────────
+numpy>=1.24.0
+pandas>=2.0.0
+
+# ── Machine learning ───────────────────────────────────────────
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+joblib>=1.3.0
+
+# ── Phase 3 — alerting & response ─────────────────────────────
+requests>=2.31.0
+streamlit>=1.28.0
+plotly>=5.17.0
+elasticsearch>=8.11.0
+
+# ── Phase 4 — explainability & anomaly detection ──────────────
+shap>=0.43.0
+torch>=2.1.0
+
+# ── Utilities ─────────────────────────────────────────────────
+python-dotenv>=1.0.0
