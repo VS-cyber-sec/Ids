@@ -57,11 +57,11 @@ This project implements a complete **Intrusion Detection System** that operates 
 ┌─────────────────────────────────────────────────────────────────┐
 │                        VMware Lab Network (VMnet2)              │
 │                                                                 │
-│  ┌──────────────┐    attacks    ┌──────────────┐    targets   │
-│  │  Attacker VM │ ─────────────▶│   IDS VM     │ ────────────▶│
-│  │  Kali Linux  │               │  Ubuntu 22   │              │
-│  │ 192.168.100.10│              │192.168.100.20│    ┌────────┐ │
-│  └──────────────┘               └──────┬───────┘    │Victim  │ │
+│  ┌──────────────┐    attacks    ┌──────────────┐    targets     │
+│  │  Attacker VM │ ─────────────▶│   IDS VM     │ ───────|      │
+│  │  Kali Linux  │               │  Ubuntu 22   │         |      │
+│  │ 192.168.100.10│              │192.168.100.20│     ┌───▼────┐ │
+│  └──────────────┘               └──────┬───────┘     │Victim  │ │
 │                                        │             │Meta2   │ │
 │                              ┌─────────▼──────────┐  │.100.30 │ │
 │                              │  Scapy + Pipeline  │  └────────┘ │
@@ -184,7 +184,7 @@ All 3 VMs connected on **VMware VMnet2** (host-only, no internet).
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ids-project.git
+git clone https://github.com/Vs-cyber-sec/Ids.git
 cd ids-project
 
 # Create virtual environment
