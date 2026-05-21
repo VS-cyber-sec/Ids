@@ -184,7 +184,7 @@ All 3 VMs connected on **VMware VMnet2** (host-only, no internet).
 
 ```bash
 # Clone the repository
-git clone https://github.com/Vs-cyber-sec/Ids.git
+git clone https://github.com/VS-cyber-sec/Ids
 cd ids-project
 
 # Create virtual environment
