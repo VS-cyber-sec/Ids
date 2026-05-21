@@ -1,0 +1,32 @@
+name: Lint and Syntax Check
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install lint tools
+        run: pip install flake8
+
+      - name: Syntax check all Python files
+        run: |
+          for f in capture/*.py; do
+            python -m py_compile "$f" && echo "OK $f"
+          done
+
+      - name: Flake8 style check
+        run: |
+          flake8 capture/ --max-line-length=100 \
+            --extend-ignore=E501,W503 --exit-zero

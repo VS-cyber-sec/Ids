@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+ids_env/
+venv/
+env/
+
+# Sensitive config
+.env
+*.secret
+
+# Generated data
+data/features/*.csv
+data/logs/*.log
+data/pcaps/*.pcap
+data/train.csv
+data/test.csv
+data/predictions.log
+data/attack_session.log
+data/current_label.txt
+data/blocked_ips.log
+data/sniffer.pid
+
+# Model artifacts
+model/*.pkl
+model/*.pt
+model/*.json
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE
+.vscode/
+.idea/
